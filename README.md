@@ -34,4 +34,4 @@ num_samples: Number of samples for statistical analysis
 
 **RESULTS**
 
-After running the code, the results will be printed to the console and saved in a CSV file named results.csv.
+After running the code, the results will be printed to the console and saved in a CSV file named results.csv. Plotting codes are provided as a separate cell inside the "monthsafter" files.
