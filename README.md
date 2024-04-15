@@ -32,6 +32,39 @@ months_after: Number of months after a consecutive period
 
 num_samples: Number of samples for statistical analysis
 
-**RESULTS**
+**NOTEBOOKS OVERVIEW**
 
-After running the code, the results will be printed to the console and saved in a CSV file named results.csv. Plotting codes are provided as a separate cell inside the "monthsafter" files.
+This repository contains notebooks for conducting statistical analysis on heatwave data to investigate the significance of oceanographic and biological variables during consecutive heatwave periods compared to non-heatwave periods. For each oceanographic variables and biological variables, there are two sets of notebooks named "consecutive" and "months_after". The Consecutive notebook provides the result for statistical analysis of variables which existed for 'n' number of consective months. And if you want to find out what happened to each variable after each months when a heatwave existed consecutively for 'n' months, "months_after" notebooks should be used.
+
+1. Preprocessing.ipynb
+   
+Inputs:
+
+The notebook takes input parameters from a CSV file (PARAMETERS.csv) containing information such as start year, end year, Longhurst region code, region name, number of samples, consecutive months threshold, and months after.
+
+Outputs:
+
+The notebook performs preprocessing steps on data stored in netCDF files.
+
+Outputs include:
+
+Sliced heatwave data for the specified time range saved as new netCDF files.
+
+Masked heatwave data based on Longhurst regions saved as netCDF files.
+
+Monthly masks for marine heatwaves saved as netCDF files.
+
+Consecutive monthly masks for values 3 or 4 saved as netCDF files.
+
+Information about consecutive heatwaves saved as CSV files.
+
+2. Statistical_Analysis.ipynb
+
+Inputs:
+
+The notebook takes preprocessed heatwave data, Longhurst region masks, and specified parameters for statistical analysis.
+
+Outputs:
+
+Performs statistical analysis using the Wilcoxon signed-rank test to compare variables during consecutive heatwave periods and non-heatwave periods.
+CSV files containing results of the statistical analysis for each variable. Plots are created in the upcoming cells.
