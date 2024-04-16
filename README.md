@@ -58,6 +58,8 @@ Consecutive monthly masks for values 3 or 4 saved as netCDF files.
 
 Information about consecutive heatwaves saved as CSV files.
 
+In case of months_after files, there will be one more mask file which calculates the months after dates and creates a mask for those dates
+
 2. Statistical_Analysis.ipynb
 
 Inputs:
