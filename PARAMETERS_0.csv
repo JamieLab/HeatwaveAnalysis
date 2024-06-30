@@ -1,0 +1,9 @@
+﻿start_year ,end_year ,longhurst_region_code ,region_name ,combined_cat_values ,consecutive_months_threshold ,num_samples,months_after
+2014,2017,38,NPTG,"[3, 4]",3,100,12
+2016,2018,53,ANTA,"[3, 4]",3,100,12
+2015,2017,36,TASM,"[3, 4]",3,100,12
+2010,2012,29,AUSW,"[3, 4]",3,100,12
+2014,2017,44,CCAL,"[3, 4]",3,100,12
+2014,2017,39,PNEC,"[3, 4]",3,100,12
+2011,2013,2,ARCT,"[3,4]",3,100,12
+2011,2013,15,NWCS,"[3,4]",3,100,12
