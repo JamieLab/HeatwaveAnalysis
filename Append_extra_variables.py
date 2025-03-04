@@ -98,16 +98,16 @@ def append_variables(file,start_yr,end_yr,log,lag,dims = ('time','lat','lon'),tr
 #
 # append_variables(oceansoda_file,start_yr_o,end_yr_o,log,lag)
 #
-# oceansoda_file = 'E:/OceanHealth/Ford_et_al_UExP-FFN-U_physics_carbonatesystem_ESASCOPE_v4.nc'
-# start_yr_o = 1985
-# end_yr_o = 2023
-# log,lag = du.reg_grid(lat=1,lon=1)
-#
-# append_variables(oceansoda_file,start_yr_o,end_yr_o,log,lag,dims=('longitude','latitude','time'),trans=[0,1,2])
-
-oceansoda_file = 'E:/OceanHealth/UExP-FNN-U_GCB2024.nc'
+oceansoda_file = 'E:/OceanHealth/Ford_et_al_UExP-FNN-U_physics_carbonatesystem_ESASCOPE_v5.nc'
 start_yr_o = 1985
 end_yr_o = 2023
 log,lag = du.reg_grid(lat=1,lon=1)
 
 append_variables(oceansoda_file,start_yr_o,end_yr_o,log,lag,dims=('longitude','latitude','time'),trans=[0,1,2])
+
+# oceansoda_file = 'E:/OceanHealth/UExP-FNN-U_GCB2024.nc'
+# start_yr_o = 1985
+# end_yr_o = 2023
+# log,lag = du.reg_grid(lat=1,lon=1)
+#
+# append_variables(oceansoda_file,start_yr_o,end_yr_o,log,lag,dims=('longitude','latitude','time'),trans=[0,1,2])
