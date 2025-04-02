@@ -48,7 +48,7 @@ def append_variables(file,start_yr,end_yr,log,lag,dims = ('time','lat','lon'),tr
     c.close()
 
     import Data_Loading.ccmp_average as cc
-    cc.ccmp_average('F:/Data/CCMP/v3.1/monthly',outloc='E:/OceanHealth/CCMP',start_yr=start_yr,end_yr=end_yr,log=log,lag=lag,v =3.1,var='ws',geb_file='F:/Data/Bathymetry/GEBCO_2023.nc')
+    cc.ccmp_average('F:/Data/CCMP/v3.1/monthly',outloc='E:/OceanHealth/CCMP',start_yr=start_yr,end_yr=end_yr,log=log,lag=lag,v =3.1,var='ws',gebco_file='F:/Data/Bathymetry/GEBCO_2023.nc')
 
 
     # #Vars should have each entry as [Extra_Name, netcdf_variable_name,data_location,produce_anomaly]
@@ -98,12 +98,12 @@ def append_variables(file,start_yr,end_yr,log,lag,dims = ('time','lat','lon'),tr
 #
 # append_variables(oceansoda_file,start_yr_o,end_yr_o,log,lag)
 #
-oceansoda_file = 'E:/OceanHealth/Ford_et_al_UExP-FNN-U_physics_carbonatesystem_ESASCOPE_v5.nc'
-start_yr_o = 1985
-end_yr_o = 2023
-log,lag = du.reg_grid(lat=1,lon=1)
-
-append_variables(oceansoda_file,start_yr_o,end_yr_o,log,lag,dims=('longitude','latitude','time'),trans=[0,1,2])
+# oceansoda_file = 'E:/OceanHealth/Ford_et_al_UExP-FNN-U_physics_carbonatesystem_ESASCOPE_v5.nc'
+# start_yr_o = 1985
+# end_yr_o = 2023
+# log,lag = du.reg_grid(lat=1,lon=1)
+#
+# append_variables(oceansoda_file,start_yr_o,end_yr_o,log,lag,dims=('longitude','latitude','time'),trans=[0,1,2])
 
 # oceansoda_file = 'E:/OceanHealth/UExP-FNN-U_GCB2024.nc'
 # start_yr_o = 1985
@@ -111,3 +111,10 @@ append_variables(oceansoda_file,start_yr_o,end_yr_o,log,lag,dims=('longitude','l
 # log,lag = du.reg_grid(lat=1,lon=1)
 #
 # append_variables(oceansoda_file,start_yr_o,end_yr_o,log,lag,dims=('longitude','latitude','time'),trans=[0,1,2])
+
+oceansoda_file = 'E:/OceanHealth/UExP-FNN-U_GCB2024_nonreanalysed.nc'
+start_yr_o = 1985
+end_yr_o = 2023
+log,lag = du.reg_grid(lat=1,lon=1)
+
+append_variables(oceansoda_file,start_yr_o,end_yr_o,log,lag,dims=('longitude','latitude','time'),trans=[0,1,2])
